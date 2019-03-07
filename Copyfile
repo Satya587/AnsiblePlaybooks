@@ -1,0 +1,11 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+  - name: Copy file to a remote server
+    copy:
+     src: /root/demo.txt
+     dest: /tmp/demo.txt
+  - name: To display Message
+    debug:
+     msg: Files are copied!!!
